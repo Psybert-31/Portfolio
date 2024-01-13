@@ -1,0 +1,371 @@
+:root {
+    --allbg: #1e1e1e;
+    font-size:  62.5%;
+}
+
+html {
+    font-size:  62.5%;
+}
+
+body {
+    background-color: var(--allbg);
+}
+
+body:after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(fb-color.png) url(yt.png);
+}
+
+h1 {
+    font-size: 2.6rem;
+    line-height: 1.5;
+}
+
+a {
+    font-size: 1.4rem;
+    line-height: 1.75;
+    cursor: pointer;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.75;
+    color: #ffff;
+}
+
+.wrapper-main {
+    width: 100rem;
+    margin: 0 auto;
+}
+
+.header-main {
+    --bg: #ffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.header-main .logo {
+    width: fit-content;
+    height: 100%;
+    padding-left: 15px;
+    display: flex;
+}
+
+.header-main .logo img {
+    height: 47px;
+    align-self: center;
+}
+
+.header-main .nav {
+    width: fit-content;
+    height: 100%;
+}
+
+.header-main .nav ul {
+    list-style: none;
+}
+
+.header-main .nav ul li {
+   display: inline;
+   float: left;
+   margin-left: 30px;
+}
+
+.header-main .nav ul li a{
+    font-family: Rubik Doodle Shadow;
+    padding: 0 10px;
+    line-height: 60px;
+    display: block;
+    height: 100%;
+}
+
+.header-main .nav ul li a:hover{
+    color: #ff1a00;
+}
+
+
+
+.header-main .sm {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding-right: 25px;
+}
+
+.header-main .sm .fb {
+    width: 3rem;
+    height: 3rem;
+    background-image: url(fb-bl.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #ff1a00;
+}
+
+.header-main .sm .yt {
+    width: 3rem;
+    height: 3rem;
+    background-image: url(yt-bl.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #ff1a00;
+}
+
+.header-main .sm .fb:hover {
+    background-image: url(fb-color.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-main .sm .yt:hover {
+    background-image: url(yt.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-main {
+    width: 100%;
+    padding: 60px 0 100px;
+    background-color: #141414;
+}
+
+.footer-main-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-main .footer-main-flex .footer-project {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-main .footer-main-flex .footer-title{
+    color: #ffff;
+    font-family: Rubik Doodle Shadow;
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 3rem;
+    padding: 15px 0 20px;
+}
+
+.footer-main .footer-main-flex .footer-project img {
+    width: 60%;
+}
+
+.footer-main .footer-main-flex .footer-project p {
+    padding: 15px 5px 15px;
+    text-align: center;
+}
+
+.footer-main .footer-main-flex .footer-link {
+    color: #ffff;
+    border: 2px solid #ffff;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    margin: 15px 0 20px;
+    transition: all ease-in-out 200ms;
+}
+
+.footer-main .footer-main-flex .footer-link:hover {
+    border: 2px solid #ff1a00;
+}
+
+.sitemap {
+    display: flex;
+    flex-basis: 100%;
+}
+
+.sitemap a{
+    color: #ffff;
+}
+
+.sitemap ul:nth-child(1) {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    padding: 15px 20px;
+    border-left: 4px solid #ff1a00;
+}
+
+.sitemap ul:nth-child(2) {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    padding: 15px 20px;
+}
+
+.sitemap ul:nth-child(3) p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding: 15px 20px;
+}
+
+.sitemap ul:nth-child(4) p {
+    font-size: 1.6rem;
+    line-height: 0.5;
+    padding: 15px 20px;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.burger-menu, .burger-menu-btn {
+    display: none;
+}
+
+/*MOBILE VERSION*/
+
+@media only screen and (max-width: 600px) {
+
+    .header-main .sm .fb {
+        border: none;
+    }
+
+    .header-main .sm .yt {
+        border: none;
+    }
+
+
+    .burger-menu-btn {
+        display: block;
+        width: 45px;
+        height: 45px;
+        margin-left: 10px;
+        background-image: url(open.png), url(close.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center, center left 50px;
+    }
+
+    .burger-menu {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 900;
+        background-color: #111;
+    }
+
+    .burger-menu ul {
+        width: 100%;
+        height: calc(100vh - 60px);
+        display: flex;
+        padding-top: 60px;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .burger-menu ul li {
+        flex-basis: 100%;
+        border-bottom: 2px solid #ffff;
+    }
+
+    .burger-menu ul li a {
+       display: block;
+       height: 100%;
+       font-size: 3rem;
+       padding: 30px;
+       flex-basis: 100%;
+       text-align: center;
+       color: #ffff;
+       font-family: Rubik Doodle Shadow;
+    }
+
+    .wrapper-main {
+        width: calc(100% - 40px)
+    }
+
+    .header-main {
+        width: 100%;
+    }
+
+    .header-main .logo {
+        padding-left: 10px;
+    }
+
+    .header-main .nav {
+        display: none;
+    }
+
+    .header-main .sm {
+        padding-right: 10px;
+    }
+    
+    .footer-main .footer-main-flex .footer-project {
+        display: none;
+    }
+
+    .footer-main .footer-main-flex .footer-title {
+        padding: 10px 0 5px;
+    }
+    
+    .sitemap {
+        flex-wrap: wrap;
+    }
+    
+    .sitemap a{
+        color: #ffff;
+    }
+    
+    .sitemap ul:nth-child(1) {
+        border: none;
+        flex-basis: 100%;
+        padding: 0;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    .sitemap ul:nth-child(2) {
+        flex-basis: 100%;
+        padding: 0;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    .sitemap ul:nth-child(3) {
+        flex-basis: 100%;
+        padding: 0;
+    }
+    
+    .sitemap ul:nth-child(4) {
+        text-align: center;
+        flex-grow: 1;
+        padding: 0;
+    }
+
+    
+    .sitemap ul:nth-child(3) p {
+        text-align: center;
+        line-height: 2;
+
+    }
+    
+    .sitemap ul:nth-child(4) p {
+       text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
